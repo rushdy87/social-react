@@ -1,6 +1,12 @@
 import './Rightbar.css';
+import { Users } from '../../dummyData';
+import { Online } from '../';
 
 const Rightbar = () => {
+  const renderOnlineFriends = Users.map((user) => {
+    return <Online key={user.id} user={user} />;
+  });
+
   return (
     <div className="rightbar">
       <div className="rightbar-wrapper">
@@ -12,96 +18,7 @@ const Rightbar = () => {
         </div>
         <img src="/assets/ad.png" alt="" className="rightbar-ad" />
         <h4 className="rightbar-title">Online Friends</h4>
-        <ul className="rightbar-friend-list">
-          <li className="rightbar-friend">
-            <div className="rightbar-profile-image-container">
-              <img
-                src="/assets/person/3.jpeg"
-                alt=""
-                className="rightbar-profile-image"
-              />
-              <span className="rightbar-online"></span>
-            </div>
-            <span className="rightbar-username">John Carter</span>
-          </li>
-          <li className="rightbar-friend">
-            <div className="rightbar-profile-image-container">
-              <img
-                src="/assets/person/4.jpeg"
-                alt=""
-                className="rightbar-profile-image"
-              />
-              <span className="rightbar-online"></span>
-            </div>
-            <span className="rightbar-username">Jami Sull</span>
-          </li>
-          <li className="rightbar-friend">
-            <div className="rightbar-profile-image-container">
-              <img
-                src="/assets/person/5.jpeg"
-                alt=""
-                className="rightbar-profile-image"
-              />
-              <span className="rightbar-online"></span>
-            </div>
-            <span className="rightbar-username">Sami Khodera</span>
-          </li>
-          <li className="rightbar-friend">
-            <div className="rightbar-profile-image-container">
-              <img
-                src="/assets/person/6.jpeg"
-                alt=""
-                className="rightbar-profile-image"
-              />
-              <span className="rightbar-online"></span>
-            </div>
-            <span className="rightbar-username">Mo Salah</span>
-          </li>
-          <li className="rightbar-friend">
-            <div className="rightbar-profile-image-container">
-              <img
-                src="/assets/person/7.jpeg"
-                alt=""
-                className="rightbar-profile-image"
-              />
-              <span className="rightbar-online"></span>
-            </div>
-            <span className="rightbar-username">Omtiti</span>
-          </li>
-          <li className="rightbar-friend">
-            <div className="rightbar-profile-image-container">
-              <img
-                src="/assets/person/8.jpeg"
-                alt=""
-                className="rightbar-profile-image"
-              />
-              <span className="rightbar-online"></span>
-            </div>
-            <span className="rightbar-username">Shiry Carl</span>
-          </li>
-          <li className="rightbar-friend">
-            <div className="rightbar-profile-image-container">
-              <img
-                src="/assets/person/9.jpeg"
-                alt=""
-                className="rightbar-profile-image"
-              />
-              <span className="rightbar-online"></span>
-            </div>
-            <span className="rightbar-username">Dr. Waad</span>
-          </li>
-          <li className="rightbar-friend">
-            <div className="rightbar-profile-image-container">
-              <img
-                src="/assets/person/10.jpeg"
-                alt=""
-                className="rightbar-profile-image"
-              />
-              <span className="rightbar-online"></span>
-            </div>
-            <span className="rightbar-username">Sara Pokman</span>
-          </li>
-        </ul>
+        <ul className="rightbar-friend-list">{renderOnlineFriends}</ul>
       </div>
     </div>
   );

@@ -10,8 +10,14 @@ import {
   Event,
   School,
 } from '@mui/icons-material';
+import { Users } from '../../dummyData';
+import { CloseFriend } from '../index';
 
 const Sidebar = () => {
+  const renderCloseFrindes = Users.map((user) => (
+    <CloseFriend key={user.id} user={user} />
+  ));
+
   return (
     <div className="sidebar">
       <div className="sidebar-wrapper">
@@ -58,72 +64,7 @@ const Sidebar = () => {
         <button className="sidebar-button">Show More</button>
         <hr className="sidebar-hr" />
 
-        <ul className="sidebar-friend-list">
-          <li className="sidebar-friend-list-item">
-            <img
-              src="/assets/person/2.jpeg"
-              alt=""
-              className="sidebar-friend-image"
-            />
-            <span className="sidebar-friend-name">Jane Doe</span>
-          </li>
-          <li className="sidebar-friend-list-item">
-            <img
-              src="/assets/person/2.jpeg"
-              alt=""
-              className="sidebar-friend-image"
-            />
-            <span className="sidebar-friend-name">Jane Doe</span>
-          </li>
-          <li className="sidebar-friend-list-item">
-            <img
-              src="/assets/person/2.jpeg"
-              alt=""
-              className="sidebar-friend-image"
-            />
-            <span className="sidebar-friend-name">Jane Doe</span>
-          </li>
-          <li className="sidebar-friend-list-item">
-            <img
-              src="/assets/person/2.jpeg"
-              alt=""
-              className="sidebar-friend-image"
-            />
-            <span className="sidebar-friend-name">Jane Doe</span>
-          </li>
-          <li className="sidebar-friend-list-item">
-            <img
-              src="/assets/person/2.jpeg"
-              alt=""
-              className="sidebar-friend-image"
-            />
-            <span className="sidebar-friend-name">Jane Doe</span>
-          </li>
-          <li className="sidebar-friend-list-item">
-            <img
-              src="/assets/person/2.jpeg"
-              alt=""
-              className="sidebar-friend-image"
-            />
-            <span className="sidebar-friend-name">Jane Doe</span>
-          </li>
-          <li className="sidebar-friend-list-item">
-            <img
-              src="/assets/person/2.jpeg"
-              alt=""
-              className="sidebar-friend-image"
-            />
-            <span className="sidebar-friend-name">Jane Doe</span>
-          </li>
-          <li className="sidebar-friend-list-item">
-            <img
-              src="/assets/person/2.jpeg"
-              alt=""
-              className="sidebar-friend-image"
-            />
-            <span className="sidebar-friend-name">Jane Doe</span>
-          </li>
-        </ul>
+        <ul className="sidebar-friend-list">{renderCloseFrindes}</ul>
       </div>
     </div>
   );
