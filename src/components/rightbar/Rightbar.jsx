@@ -3,16 +3,22 @@ import { Users } from '../../dummyData';
 import { Online } from '../';
 
 const Rightbar = ({ profile }) => {
+  const publicFolder = process.env.REACT_APP_PUBLIC_FOLDER;
+
   const HomeRightbar = () => {
     return (
       <>
         <div className="birthday-container">
-          <img src="/assets/gift.png" alt="" className="birthday-image" />
+          <img
+            src={`${publicFolder}gift.png`}
+            alt=""
+            className="birthday-image"
+          />
           <span className="birthday-text">
             <b>Pola Foster</b> and <b>3 other friends</b> have a birthday today
           </span>
         </div>
-        <img src="/assets/ad.png" alt="" className="rightbar-ad" />
+        <img src={`${publicFolder}ad.png`} alt="" className="rightbar-ad" />
         <h4 className="rightbar-title">Online Friends</h4>
         <ul className="rightbar-friend-list">{renderOnlineFriends}</ul>
       </>
@@ -51,7 +57,7 @@ const Rightbar = ({ profile }) => {
           </div>
           <div className="rightbar-following">
             <img
-              src="/assets/person/3.jpeg"
+              src={`${publicFolder}post/3.jpeg`}
               alt=""
               className="rightbar-following-image"
             />
@@ -59,43 +65,37 @@ const Rightbar = ({ profile }) => {
           </div>
           <div className="rightbar-following">
             <img
-              src="/assets/person/4.jpeg"
+              src={`${publicFolder}post/4.jpeg`}
               alt=""
               className="rightbar-following-image"
             />
             <span className="rightbar-following-username">
-              Jody Abo Khamies
+              Abdel Slam Elbesa
             </span>
           </div>
           <div className="rightbar-following">
             <img
-              src="/assets/person/5.jpeg"
+              src={`${publicFolder}post/5.jpeg`}
               alt=""
               className="rightbar-following-image"
             />
-            <span className="rightbar-following-username">
-              Jody Abo Khamies
-            </span>
+            <span className="rightbar-following-username">Adel Elfsad</span>
           </div>
           <div className="rightbar-following">
             <img
-              src="/assets/person/6.jpeg"
+              src={`${publicFolder}post/6.jpeg`}
               alt=""
               className="rightbar-following-image"
             />
-            <span className="rightbar-following-username">
-              Jody Abo Khamies
-            </span>
+            <span className="rightbar-following-username">Abu Shamlah</span>
           </div>
           <div className="rightbar-following">
             <img
-              src="/assets/person/7.jpeg"
+              src={`${publicFolder}post/7.jpeg`}
               alt=""
               className="rightbar-following-image"
             />
-            <span className="rightbar-following-username">
-              Jody Abo Khamies
-            </span>
+            <span className="rightbar-following-username">Abu Nader</span>
           </div>
         </div>
       </>

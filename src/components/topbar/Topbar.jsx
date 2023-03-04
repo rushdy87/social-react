@@ -1,11 +1,14 @@
 import './Topbar.css';
 import { Search, Person, Chat, Notifications } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 const Topbar = () => {
   return (
     <div className="topbar-container">
       <div className="topbar-left">
-        <span className="logo">SOCIAL</span>
+        <Link to="/" className="link">
+          <span className="logo">SOCIAL</span>
+        </Link>
       </div>
       <div className="topbar-center">
         <div className="search-bar">
@@ -19,8 +22,12 @@ const Topbar = () => {
       </div>
       <div className="topbar-right">
         <div className="topbar-links">
-          <span className="topbar-link">Home</span>
-          <span className="topbar-link">Timeline</span>
+          <Link to="/" className="link">
+            <span className="topbar-link">Home</span>
+          </Link>
+          <Link to="/" className="link">
+            <span className="topbar-link">Timeline</span>
+          </Link>
         </div>
         <div className="topbar-icons">
           <div className="topbar-icon-item">

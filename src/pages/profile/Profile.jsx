@@ -2,6 +2,8 @@ import { Topbar, Sidebar, Feed, Rightbar } from '../../components';
 import './Profile.css';
 
 const Profile = () => {
+  const publicFolder = process.env.REACT_APP_PUBLIC_FOLDER;
+
   return (
     <>
       <Topbar />
@@ -11,12 +13,12 @@ const Profile = () => {
           <div className="profile-right-top">
             <div className="profile-cover">
               <img
-                src="/assets/post/1.jpeg"
+                src={`${publicFolder}post/1.jpeg`}
                 alt=""
                 className="profile-cover-image"
               />
               <img
-                src="/assets/person/1.jpeg"
+                src={`${publicFolder}person/1.jpeg`}
                 alt=""
                 className="profile-user-image"
               />

@@ -1,10 +1,12 @@
 import './Online.css';
 const Online = ({ user }) => {
+  const publicFolder = process.env.REACT_APP_PUBLIC_FOLDER;
+
   return (
     <li className="online-friend">
       <div className="online-profile-image-container">
         <img
-          src={user.profilePicture}
+          src={publicFolder + user.profilePicture}
           alt=""
           className="online-profile-image"
         />
